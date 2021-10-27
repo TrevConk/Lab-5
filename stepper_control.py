@@ -14,11 +14,11 @@ else:
 selection = data.getvalue('submit')
 
 Brightness = data.getvalue('BrightVal')
-dataDump = {'Angle':angle,'Selection':selection}
+dataDump = {'angle':angle,'selection':selection}
 with open('stepperControlDump.txt', 'w') as f:
   json.dump(dataDump, f)
 
-if selection == 'zero':
+if selection == 'zero': #set angle to zero for processing the webpage
     angle = 0
 
 print('Content-type: text/html\n\n')
