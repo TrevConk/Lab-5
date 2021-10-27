@@ -36,10 +36,11 @@ def moveSteps(steps, dir):
     for step in steps:
         halfstep(dir)
 
+# Commented out because implemented into stepper_control_back
 
-try:
-  loop(cw)
-  loop(ccw)
-except:
-  pass
-GPIO.cleanup() 
+#try:
+#  loop(cw)
+#  loop(ccw)
+#except:
+#  pass
+#GPIO.cleanup() 

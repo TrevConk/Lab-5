@@ -30,12 +30,14 @@ class Photoresistor:
     self.Light = self.adc.read(0)
 
 light = Photoresistor(0x40)
+ 
+# Commented out because implemented into stepper_control_back
 
-try:
-  while(True):
-    light.getLight()
-    print('{:>3}'.format(light.Light))
-    time.sleep(.1)
-except Exception as e:
-  print(e)
+#try:
+#  while(True):
+#    light.getLight()
+#    print('{:>3}'.format(light.Light))
+#    time.sleep(.1)
+#except Exception as e:
+#  print(e)
   
