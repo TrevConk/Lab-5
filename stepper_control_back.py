@@ -13,6 +13,7 @@ try:
             angle = data['angle']
         if selection == 'Zero': #if for if zero was submit
             light.getLight()
+            print('{:>3}'.format(light.Light))
             while(int('{:>3}'.format(light.Light)) < 210):
                 moveSteps(8,1)
             currentAngle = 0
