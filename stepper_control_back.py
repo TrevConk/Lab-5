@@ -2,7 +2,7 @@ from Stepper import *
 from PCF8591 import *
 import json
 
-
+light = Photoresistor(0x40)
 
 try:
     while True:

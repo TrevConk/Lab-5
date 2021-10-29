@@ -29,7 +29,7 @@ class Photoresistor:
   def getLight(self):
     self.Light = self.adc.read(0)
 
-light = Photoresistor(0x40)
+
  
 # Commented out because implemented into stepper_control_back
 
