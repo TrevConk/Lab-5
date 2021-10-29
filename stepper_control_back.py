@@ -20,6 +20,7 @@ try:
             print(steps)
             moveSteps(steps,1)
             currentAngle = angle
+        time.sleep(.1)
 
 
 except Exception as e: #exception error to print error and line number
