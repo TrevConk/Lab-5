@@ -28,7 +28,7 @@ print('Content-type: text/html\n\n')
 print('''
     <html>
     <form action="/cgi-bin/stepper_control.py" method="POST">''')
-print('<b>Current Angle: %s</b>') %angle
+print('<b>Current Angle:</b>')
 print('<b>Use Range to Input Angle</b>')
 print('<input type="range" name="angleRange" min="0" max="360" value="%s"><br>' % angle)
 print('''
