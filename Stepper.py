@@ -25,6 +25,7 @@ def halfstep(dir):
     global state
     #direction +/- one + -> ccw - -> cw
     state += dir
+    print(state)
     if state > 7:
         state = 0
     elif state < 0:
