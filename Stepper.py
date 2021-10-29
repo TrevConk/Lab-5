@@ -38,7 +38,7 @@ def moveSteps(steps, dir):
         halfstep(dir)
 
 while True:
-    moveSteps(3, 1)
+    halfstep(1)
 # Commented out because implemented into stepper_control_back
 
 #try:
