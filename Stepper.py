@@ -32,6 +32,7 @@ def halfstep(dir):
         state = 7
     for pin in range(4):    # 4 pins that need to be energized
         GPIO.output(pins[pin], ccw[state][pin])
+    delay_us(1000)
 
 def moveSteps(steps, dir):
     for step in range(steps):
