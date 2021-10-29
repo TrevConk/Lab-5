@@ -23,9 +23,9 @@ def delay_us(tus): # use microseconds to improve time resolution
     pass
 
 def halfstep(dir):
-    state = 0
     #direction +/- one + -> ccw - -> cw
     state += dir
+    print(state)
     if state > 7:
         state = 0
     elif state < 0:
@@ -39,7 +39,7 @@ def moveSteps(steps, dir):
 
 try:
     while True:
-        halfstep(8)
+        halfstep(1)
 except Exception as e:
     print(e)
     GPIO.cleanup()
