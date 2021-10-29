@@ -11,7 +11,12 @@ value = 0
 #if data.has_key('angleText'):
 #    angle = data.getvalue('angleText')
 #else:
-angle = data.getvalue('angleRange')
+
+if data.getvalue('angleText') is not None:
+    angle = data.getvalue('angleText')
+else:
+    angle = data.getvalue('angleRange')
+
 
 
 selection = data.getvalue('submit')
