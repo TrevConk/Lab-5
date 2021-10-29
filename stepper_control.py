@@ -3,7 +3,7 @@ import cgi
 import cgitb
 import json
 
-cgitb.enable()
+cgitb.enable(display=1)
 data = cgi.FieldStorage()
 
 if value in data.getvalue('angleText'):
