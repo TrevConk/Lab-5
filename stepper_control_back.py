@@ -25,5 +25,4 @@ try:
 except Exception as e: #exception error to print error and line number
     print('Error in the code')
     print(e)
-    print(e.format_exc())
     GPIO.cleanup()
