@@ -11,7 +11,8 @@ try:
             selection = data['selection'] #selection input decides weather going to 0 or angle
             angle = int(data['angle'])
             if selection == 'Zero': #if for if zero was submit
-                print(light.getLight)
+                light.getLight()
+                print('{:>3}'.format(light.Light))
     
 except Exception as e: #exception error to print error and line number
     print('Error in the code')
