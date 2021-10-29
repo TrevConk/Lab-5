@@ -25,7 +25,6 @@ print('Content-type: text/html\n\n')
 print('''
     <html>
     <form action="/cgi-bin/stepper_control.py" method="POST">''')
-print('<b>Use Slider to Input Angle. Current angle = %s</b>' %angle)
 print('<input type="range" name="angleRange" min="0" max="180" value="%s"><br>' % angle)
 print('''
     <input type="text" name="angleText"><br>
