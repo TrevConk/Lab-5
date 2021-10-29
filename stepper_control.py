@@ -13,7 +13,7 @@ value = 0
 #else:
 #    angle = int(data.getValue('angleRange'))
 
-angle = data.getvalue('angleRange')
+angle = data.getvalue()
 
 selection = data.getvalue('submit')
 
@@ -27,9 +27,9 @@ if selection == 'zero': #set angle to zero for processing the webpage
 print('Content-type: text/html\n\n')
 print('''
     <html>
-    <form action="/cgi-bin/stepper_control.py" method="POST">
-    <b>Current Angle: %s</b>
-    <b>Use Range to Input Angle</b>''') %angle
+    <form action="/cgi-bin/stepper_control.py" method="POST">''')
+print('<b>Current Angle: %s</b>') %angle
+print('<b>Use Range to Input Angle</b>')
 print('<input type="range" name="angleRange" min="0" max="360" value="%s"><br>' % angle)
 print('''
     <b>Use Slider to Input Angle</b>
