@@ -3,6 +3,7 @@ from PCF8591 import *
 import json
 
 light = Photoresistor(0x40)
+currentAngle = 0
 
 try:
     while True:
@@ -13,12 +14,14 @@ try:
             if selection == 'Zero': #if for if zero was submit
                 light.getLight()
                 print('{:>3}'.format(light.Light))
-            else:
+            elif selection == 'Submit' and currentAngle != angle:
                 print(angle)
                 steps = int(float(angle)*512/360)
                 print(steps)
                 moveSteps(steps,1)
-    
+                currentAngle = angle
+
+
 except Exception as e: #exception error to print error and line number
     print('Error in the code')
     print(e)
