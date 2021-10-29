@@ -12,7 +12,7 @@ try:
             angle = int(data['Angle'])
             if selection == 'zero': #if for if zero was submit
                 while(light.getLight() < 190): #check to see that the light is not blocked
-                    halfstep(1)
+                    print('turning')
     
 except Exception as e: #exception error to print error and line number
     print('Error in the code')
