@@ -8,10 +8,10 @@ data = cgi.FieldStorage()
 
 value = 0
 
-if data.has_key('angleText'):
-    angle = data.getvalue('angleText')
-else:
-    angle = data.getValue('angleRange')
+#if data.has_key('angleText'):
+#    angle = data.getvalue('angleText')
+#else:
+angle = data.getValue('angleRange')
 
 
 selection = data.getvalue('submit')
