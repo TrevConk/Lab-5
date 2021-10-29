@@ -16,6 +16,7 @@ try:
             else:
                 print(angle)
                 steps = int(float(angle)*512/360)
+                print(steps)
                 moveSteps(steps,1)
     
 except Exception as e: #exception error to print error and line number
