@@ -11,7 +11,7 @@ value = 0
 if value in data.getvalue('angleText'):
     angle = value
 else:
-    angle = int(data.getValue('angleRange'))
+    angle = data.getValue('angleRange')
 
 
 selection = data.getvalue('submit')
