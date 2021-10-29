@@ -13,8 +13,7 @@ for pin in pins:
 ccw = [ [1,0,0,0],[1,1,0,0],[0,1,0,0],[0,1,1,0],
         [0,0,1,0],[0,0,1,1],[0,0,0,1],[1,0,0,1] ]
         
-
-
+state = 0
 
 
 def delay_us(tus): # use microseconds to improve time resolution
@@ -23,6 +22,7 @@ def delay_us(tus): # use microseconds to improve time resolution
     pass
 
 def halfstep(dir):
+    global state
     #direction +/- one + -> ccw - -> cw
     state += dir
     print(state)
@@ -39,7 +39,7 @@ def moveSteps(steps, dir):
 
 try:
     while True:
-        halfstep(1)
+        moveSteps(8, 1)
 except Exception as e:
     print(e)
     GPIO.cleanup()
