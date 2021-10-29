@@ -34,7 +34,7 @@ def halfstep(dir):
         GPIO.output(pins[pin], ccw[state][pin])
 
 def moveSteps(steps, dir):
-    for step in steps:
+    for step in range(steps):
         halfstep(dir)
 
 try:
