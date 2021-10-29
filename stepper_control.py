@@ -8,7 +8,7 @@ data = cgi.FieldStorage()
 
 value = 0
 
-if 'angleText' in data:
+if data.has_key('angleText'):
     angle = data.getvalue('angleText')
 else:
     angle = data.getValue('angleRange')
