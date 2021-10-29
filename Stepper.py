@@ -32,12 +32,12 @@ def halfstep(dir):
         state = 7
     for pin in range(4):    # 4 pins that need to be energized
         GPIO.output(pins[pin], ccw[state][pin])
+    delay_us(1000)
 
 def moveSteps(steps, dir):
     print('inloop')
     for step in range(steps):
         halfstep(dir)
-        delay_us(1000)
 
 
 # Commented out because implemented into stepper_control_back
