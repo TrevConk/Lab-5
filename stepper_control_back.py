@@ -15,7 +15,7 @@ try:
                 print('{:>3}'.format(light.Light))
             else:
                 print(angle)
-                moveSteps((angle*512)/360,1)
+                moveSteps((int(angle)*512)/360,1)
     
 except Exception as e: #exception error to print error and line number
     print('Error in the code')
