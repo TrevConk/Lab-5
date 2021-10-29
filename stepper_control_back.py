@@ -13,12 +13,17 @@ try:
             angle = data['angle']
         if selection == 'Zero': #if for if zero was submit
             light.getLight()
-            print('{:>3}'.format(light.Light))
+            while(int('{:>3}'.format(light.Light)) < 210):
+                moveSteps(8,1)
+            currentAngle = 0
         elif selection == 'Submit' and currentAngle != angle:
             print(angle)
-            steps = int(float(angle)*8*512/360)
+            steps = int((float(angle)-currentAngle)*8*512/360)
             print(steps)
-            moveSteps(steps,1)
+            if(steps > 0):
+                moveSteps(steps,1)
+            else:
+                moveSteps(steps,-1)
             currentAngle = angle
         time.sleep(.1)
 
