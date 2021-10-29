@@ -23,7 +23,7 @@ try:
             if(steps > 0):
                 moveSteps(steps,1)
             else:
-                moveSteps(steps,-1)
+                moveSteps(abs(steps),-1)
             currentAngle = angle
         time.sleep(.1)
 
