@@ -39,7 +39,7 @@ def moveSteps(steps, dir):
 
 try:
     while True:
-        moveSteps(8, 1)
+        moveSteps(1, 1)
 except Exception as e:
     print(e)
     GPIO.cleanup()
