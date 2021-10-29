@@ -38,14 +38,16 @@ def moveSteps(steps, dir):
     for step in range(steps):
         halfstep(dir)
 
-try:
-    while True:
-        moveSteps(1, 1)
-except Exception as e:
-    print(e)
-    GPIO.cleanup()
+
 # Commented out because implemented into stepper_control_back
 
+#try:
+#    while True:
+#        moveSteps(1, 1)
+#except Exception as e:
+#    print(e)
+#    GPIO.cleanup()
+    
 #try:
 #  loop(cw)
 #  loop(ccw)

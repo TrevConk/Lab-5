@@ -13,6 +13,8 @@ try:
             if selection == 'Zero': #if for if zero was submit
                 light.getLight()
                 print('{:>3}'.format(light.Light))
+            else:
+                moveSteps(angle*(512/360),1)
     
 except Exception as e: #exception error to print error and line number
     print('Error in the code')
