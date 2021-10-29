@@ -11,15 +11,15 @@ try:
             data = json.load(f)
             selection = data['selection'] #selection input decides weather going to 0 or angle
             angle = data['angle']
-            if selection == 'Zero': #if for if zero was submit
-                light.getLight()
-                print('{:>3}'.format(light.Light))
-            elif selection == 'Submit' and currentAngle != angle:
-                print(angle)
-                steps = int(float(angle)*512/360)
-                print(steps)
-                moveSteps(steps,1)
-                currentAngle = angle
+        if selection == 'Zero': #if for if zero was submit
+            light.getLight()
+            print('{:>3}'.format(light.Light))
+        elif selection == 'Submit' and currentAngle != angle:
+            print(angle)
+            steps = int(float(angle)*512/360)
+            print(steps)
+            moveSteps(steps,1)
+            currentAngle = angle
 
 
 except Exception as e: #exception error to print error and line number
