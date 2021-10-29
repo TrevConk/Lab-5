@@ -39,8 +39,9 @@ def moveSteps(steps, dir):
 
 try:
     while True:
-        halfstep(1)
+        halfstep(8)
 except Exception as e:
+    print(e)
     GPIO.cleanup()
 # Commented out because implemented into stepper_control_back
 
