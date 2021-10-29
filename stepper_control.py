@@ -6,14 +6,15 @@ import json
 cgitb.enable(display=1)
 data = cgi.FieldStorage()
 
-if value in data.getvalue('angleText'):
+value = 0
+
+if value in int(data.getvalue('angleText')):
     angle = value
 else:
-    angle = data.getValue('angleRange')
+    angle = int(data.getValue('angleRange'))
 
 selection = data.getvalue('submit')
 
-Brightness = data.getvalue('BrightVal')
 dataDump = {'angle':angle,'selection':selection}
 with open('stepperControlDump.txt', 'w') as f:
   json.dump(dataDump, f)
