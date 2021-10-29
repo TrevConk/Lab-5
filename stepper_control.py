@@ -8,10 +8,10 @@ data = cgi.FieldStorage()
 
 value = 0
 
-#if data.has_key('angleText'):
-#    angle = data.getvalue('angleText')
-#else:
-angle = data.getValue('angleRange')
+if data.has_key('angleText'):
+    angle = data.getvalue('angleText')
+else:
+    angle = data.getvalue('angleRange')
 
 
 selection = data.getvalue('submit')
@@ -27,7 +27,6 @@ print('Content-type: text/html\n\n')
 print('''
     <html>
     <form action="/cgi-bin/stepper_control.py" method="POST">''')
-#print('<b>%s</b>') %data.getvalue('angleText')
 print('<b>Current Angle: %s</b><br>' %angle)
 print('<b>Use Range to Input Angle</b>')
 print('<input type="range" name="angleRange" min="0" max="360" value="%s"><br>' % angle)
