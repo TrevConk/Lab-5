@@ -14,8 +14,9 @@ try:
         if selection == 'Zero': #if for if zero was submit
             light.getLight()
             print('{:>3}'.format(light.Light))
-            while(int('{:>3}'.format(light.Light)) < 210):
+            while(int('{:>3}'.format(light.Light)) < 200):
                 moveSteps(8,1)
+                print('{:>3}'.format(light.Light))
             currentAngle = 0
         elif selection == 'Submit' and currentAngle != angle:
             print(angle)
