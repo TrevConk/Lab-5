@@ -16,7 +16,7 @@ try:
             print('{:>3}'.format(light.Light))
         elif selection == 'Submit' and currentAngle != angle:
             print(angle)
-            steps = int(float(angle)*512/360)
+            steps = int(float(angle)*8*512/360)
             print(steps)
             moveSteps(steps,1)
             currentAngle = angle
