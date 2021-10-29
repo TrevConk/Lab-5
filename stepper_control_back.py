@@ -18,7 +18,7 @@ try:
             currentAngle = 0
         elif selection == 'Submit' and currentAngle != angle:
             print(angle)
-            steps = int((float(angle)-currentAngle)*8*512/360)
+            steps = int((float(angle)-float(currentAngle))*8*512/360)
             print(steps)
             if(steps > 0):
                 moveSteps(steps,1)
