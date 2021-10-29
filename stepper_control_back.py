@@ -8,9 +8,9 @@ try:
     while True:
         with open('/usr/lib/cgi-bin/stepperControlDump.txt','r') as f: #open data dump file
             data = json.load(f)
-            selection = data['Selection'] #selection input decides weather going to 0 or angle
-            angle = int(data['Angle'])
-            if selection == 'zero': #if for if zero was submit
+            selection = data['selection'] #selection input decides weather going to 0 or angle
+            angle = int(data['angle'])
+            if selection == 'Zero': #if for if zero was submit
                 while(light.getLight() < 190): #check to see that the light is not blocked
                     print('turning')
     
