@@ -15,7 +15,7 @@ ccw = [ [1,0,0,0],[1,1,0,0],[0,1,0,0],[0,1,1,0],
         
 
 
-global state
+
 
 def delay_us(tus): # use microseconds to improve time resolution
   endTime = time.time() + float(tus)/ float(1E6)
@@ -23,6 +23,7 @@ def delay_us(tus): # use microseconds to improve time resolution
     pass
 
 def halfstep(dir):
+    state = 0
     #direction +/- one + -> ccw - -> cw
     state += dir
     if state > 7:
