@@ -15,6 +15,7 @@ try:
             light.getLight()
             print('{:>3}'.format(light.Light))
             while(int('{:>3}'.format(light.Light)) < 200):
+                light.getLight()
                 moveSteps(8,1)
                 print('{:>3}'.format(light.Light))
             currentAngle = 0
