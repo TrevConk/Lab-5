@@ -39,6 +39,18 @@ def moveSteps(steps, dir):
     for step in range(steps):
         halfstep(dir)
 
+def zero():
+    moveSteps(8,1)
+
+def goAngle(angle, currentAngle):
+    steps = int((float(angle)-float(currentAngle))*8*512/360)
+    if(steps > 0):
+        moveSteps(steps,1)
+    else:
+        moveSteps(abs(steps),-1)
+        currentAngle = angle
+    time.sleep(.1)
+
 
 # Commented out because implemented into stepper_control_back
 

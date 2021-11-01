@@ -1,6 +1,12 @@
 from Stepper import *
 from PCF8591 import *
 import json
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM) #GPIO SETUP
+
+GPIO.setup(13, GPIO.OUT) #Establish LED on GPIO Pin 13
+
 
 light = Photoresistor(0x40)
 currentAngle = 0
@@ -12,23 +18,17 @@ try:
             selection = data['selection'] #selection input decides weather going to 0 or angle
             angle = data['angle']
         if selection == 'Zero': #if for if zero was submit
-            light.getLight()
+            GPIO.output(13, GPIO.HIGH) #Turn on LED
+            light.getLight() 
             print('{:>3}'.format(light.Light))
             while(int('{:>3}'.format(light.Light)) < 220):
                 light.getLight()
-                moveSteps(8,1)
+                zero()
                 print('{:>3}'.format(light.Light))
             currentAngle = 0
-        elif selection == 'Submit' and currentAngle != angle:
-            print(angle)
-            steps = int((float(angle)-float(currentAngle))*8*512/360)
-            print(steps)
-            if(steps > 0):
-                moveSteps(steps,1)
-            else:
-                moveSteps(abs(steps),-1)
-            currentAngle = angle
-        time.sleep(.1)
+            GPIO.output(13, GPIO.LOW)
+        elif selection == 'Submit' and currentAngle != angle: #if submit was normal submit
+            goAngle(angle, currentAngle)
 
 
 except Exception as e: #exception error to print error and line number
