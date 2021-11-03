@@ -27,13 +27,12 @@ try:
                 print('{:>3}'.format(light.Light))
             currentAngle = 0
             GPIO.output(13, GPIO.LOW)
-            time.sleep(.1)
         elif selection == 'Submit' and currentAngle != angle: #if submit was normal submit
             goAngle(angle, currentAngle)
             currentAngle = angle
             print(angle)
             print(currentAngle)
-            time.sleep(.1)
+        time.sleep(.1)
 
 
 except Exception as e: #exception error to print error and line number
