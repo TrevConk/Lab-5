@@ -29,6 +29,9 @@ try:
             GPIO.output(13, GPIO.LOW)
         elif selection == 'Submit' and currentAngle != angle: #if submit was normal submit
             goAngle(angle, currentAngle)
+            currentAngle = angle
+            print(angle)
+            print(currentAngle)
 
 
 except Exception as e: #exception error to print error and line number

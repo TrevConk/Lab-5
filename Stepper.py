@@ -48,7 +48,6 @@ def goAngle(angle, currentAngle):
         moveSteps(steps,1)
     else:
         moveSteps(abs(steps),-1)
-        currentAngle = angle
     time.sleep(.1)
 
 
