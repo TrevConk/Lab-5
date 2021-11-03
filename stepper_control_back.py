@@ -21,7 +21,7 @@ try:
             GPIO.output(13, GPIO.HIGH) #Turn on LED
             light.getLight() 
             print('{:>3}'.format(light.Light))
-            while(int('{:>3}'.format(light.Light)) < 220):
+            while(int('{:>3}'.format(light.Light)) < 200):
                 light.getLight()
                 zero()
                 print('{:>3}'.format(light.Light))
