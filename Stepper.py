@@ -48,7 +48,6 @@ def goAngle(angle, currentAngle):
         moveSteps(steps,1)
     else:
         moveSteps(abs(steps),-1)
-    time.sleep(.1)
 
 
 # Commented out because implemented into stepper_control_back
